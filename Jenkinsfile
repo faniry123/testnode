@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'agentlinux' }
+  agent any
 
   stages {
     stage('Check Node and NPM versions') {
