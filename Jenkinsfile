@@ -3,9 +3,9 @@ pipeline {
   tools {nodejs "Node"}
 
   stages {
-    stage('Check Node and NPM versions') {
+    stage('Check Node and NPM version') {
       steps {
-        bat 'npm install'
+        sh 'node --version'
       }
     }
     // Ajoutez d'autres étapes au besoin
