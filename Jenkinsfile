@@ -1,12 +1,15 @@
-pipeline{
-  agent {label 'agentlinux'}
+pipeline {
+  agent { label 'agentlinux' }
 
-  stages{
-    stage{
-      steps{
-        sh "node --version"
-        sh "npm --version"
+  stages {
+    stage('Check Node and NPM versions') {
+      steps {
+        script {
+          sh 'node --version'
+          sh 'npm --version'
+        }
       }
     }
+    // Ajoutez d'autres étapes au besoin
   }
 }
